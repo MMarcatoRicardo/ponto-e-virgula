@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" rx="16" fill="#EAF0F7"/>
+    <path d="M78 52 q-8 -10 0 -20 q8 -10 0 -20" fill="none" stroke="#8A94A3" stroke-width="3" stroke-linecap="round"/>
+    <path d="M102 52 q-8 -10 0 -20 q8 -10 0 -20" fill="none" stroke="#8A94A3" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="95" cy="165" rx="58" ry="7" fill="#0B1F3A" opacity="0.12"/>
+    <path d="M142 82 h10 a22 22 0 0 1 0 44 h-10" fill="none" stroke="#0B1F3A" stroke-width="11"/>
+    <rect x="42" y="60" width="104" height="104" rx="12" fill="#0B1F3A"/>
+    <rect x="42" y="60" width="104" height="10" rx="5" fill="#1E3A5F"/>
+    <text x="94" y="106" font-family="Georgia, serif" font-size="14" fill="#FFFFFF" text-anchor="middle">só mais um</text>
+    <text x="94" y="127" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#E0A526" text-anchor="middle">capítulo</text>
+</svg>

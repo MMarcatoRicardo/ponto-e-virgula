@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" rx="16" fill="#FDF3DC"/>
+    <ellipse cx="100" cy="64" rx="18" ry="18" fill="#FFE29A" opacity="0.5"/>
+    <path d="M100 48 q10 14 0 26 q-10 -12 0 -26 z" fill="#E0A526"/>
+    <line x1="100" y1="74" x2="100" y2="84" stroke="#1C2430" stroke-width="3"/>
+    <rect x="56" y="84" width="88" height="86" rx="10" fill="#0B1F3A"/>
+    <rect x="56" y="84" width="88" height="10" rx="5" fill="#F4F6F9"/>
+    <rect x="66" y="112" width="68" height="40" rx="3" fill="#FFFFFF"/>
+    <text x="100" y="128" font-family="Georgia, serif" font-size="10" fill="#0B1F3A" text-anchor="middle">biblioteca</text>
+    <text x="100" y="142" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0B1F3A" text-anchor="middle">antiga</text>
+</svg>

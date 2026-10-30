@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" rx="16" fill="#EAF0F7"/>
+    <rect x="63" y="39" width="100" height="136" rx="6" fill="#0B1F3A" opacity="0.15"/>
+    <rect x="58" y="34" width="100" height="136" rx="6" fill="#1E3A5F"/>
+    <rect x="58" y="34" width="16" height="136" fill="#0B1F3A"/>
+    <circle cx="50" cy="50" r="6" fill="none" stroke="#8A94A3" stroke-width="3"/>
+    <circle cx="50" cy="74" r="6" fill="none" stroke="#8A94A3" stroke-width="3"/>
+    <circle cx="50" cy="98" r="6" fill="none" stroke="#8A94A3" stroke-width="3"/>
+    <circle cx="50" cy="122" r="6" fill="none" stroke="#8A94A3" stroke-width="3"/>
+    <circle cx="50" cy="146" r="6" fill="none" stroke="#8A94A3" stroke-width="3"/>
+    <rect x="86" y="70" width="60" height="36" rx="3" fill="#FFFFFF"/>
+    <text x="116" y="85" font-family="Georgia, serif" font-size="10" fill="#0B1F3A" text-anchor="middle">minhas</text>
+    <text x="116" y="99" font-family="Georgia, serif" font-size="10" font-weight="bold" fill="#0B1F3A" text-anchor="middle">leituras</text>
+    <rect x="140" y="34" width="8" height="150" fill="#E0A526"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" rx="16" fill="#FDF3DC"/>
+    <path d="M72 76 v-22 a28 28 0 0 1 56 0 v22" fill="none" stroke="#C9B48A" stroke-width="8"/>
+    <path d="M48 72 h104 l8 104 h-120 z" fill="#EADCBF"/>
+    <path d="M48 72 h104 l1 12 h-106 z" fill="#D9C6A0"/>
+    <text x="100" y="118" font-family="Georgia, serif" font-size="13" fill="#0B1F3A" text-anchor="middle">leitora de</text>
+    <text x="100" y="137" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#0B1F3A" text-anchor="middle">carteirinha</text>
+    <text x="100" y="164" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#E0A526" text-anchor="middle">;</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <rect width="200" height="200" rx="16" fill="#FDF3DC"/>
+    <ellipse cx="95" cy="165" rx="58" ry="7" fill="#0B1F3A" opacity="0.12"/>
+    <path d="M142 82 h10 a22 22 0 0 1 0 44 h-10" fill="none" stroke="#E0A526" stroke-width="11"/>
+    <rect x="42" y="60" width="104" height="104" rx="12" fill="#FFFFFF" stroke="#E0A526" stroke-width="4"/>
+    <text x="94" y="120" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#E0A526" text-anchor="middle">;</text>
+    <text x="94" y="146" font-family="Georgia, serif" font-size="11" fill="#0B1F3A" text-anchor="middle">Ponto e Vírgula</text>
+</svg>
