@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponto e Vírgula - Livraria e Resenhas</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar navbar-expand-xl navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Ponto e Vírgula<span class="destaque">;</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -19,13 +20,14 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
                         <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="lancamentos.html">Lançamentos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assinatura.html">Assinatura</a></li>
                         <li class="nav-item"><a class="nav-link" href="mais-vendidos.html">Mais vendidos</a></li>
                         <li class="nav-item"><a class="nav-link" href="resenhas.html">Resenhas</a></li>
                         <li class="nav-item"><a class="nav-link" href="clube.html">Clube</a></li>
                         <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://www.skoob.com.br" target="_blank">Skoob</a></li>
+                        <li class="nav-item"><a class="nav-link botao-menu" href="nova-resenha.html">Escrever resenha</a></li>
                     </ul>
                 </div>
             </div>
@@ -33,61 +35,116 @@
     </header>
 
     <main>
-        <section id="banner" style="background-color: #1E3A5F;">
+        <section id="banner" style="background: linear-gradient(135deg, #0B1F3A 0%, #1E3A5F 60%, #2F6EA5 100%);">
             <div class="container">
-                <h1>Toda boa história merece uma pausa<span class="destaque">;</span></h1>
-                <p>Livros escolhidos a dedo e resenhas escritas por quem lê de verdade.</p>
-                <a href="catalogo.html" class="btn btn-destaque">Ver catálogo</a>
-                <a href="nova-resenha.html" class="btn btn-outline-light">Escrever resenha</a>
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <p id="saudacao" class="saudacao"></p>
+                        <h1>Toda boa história merece uma pausa<span class="destaque">;</span></h1>
+                        <p>Aqui você encontra <span id="palavraGirando" class="palavra-girando">livros escolhidos a dedo</span>.</p>
+                        <a href="catalogo.html" class="btn btn-destaque">Ver catálogo</a>
+                        <a href="assinatura.html" class="btn btn-outline-light">Conhecer a assinatura</a>
+                        <div class="numeros-banner">
+                            <div><strong id="numLivros">0</strong><span>livros</span></div>
+                            <div><strong id="numProdutos">0</strong><span>itens para leitores</span></div>
+                            <div><strong id="numResenhas">0</strong><span>resenhas</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="sorteio">
+                            <h2>Não sabe o que ler?</h2>
+                            <div class="d-flex align-items-center gap-3">
+                                <img id="capaSorteio" src="img/livros/o-hobbit.jpg" alt="Capa do livro sorteado">
+                                <div>
+                                    <p id="tituloSorteio" class="titulo-sorteio">Deixe a sorte escolher.</p>
+                                    <p id="textoSorteio" class="texto-sorteio">Clique no botão e sorteamos um livro do nosso acervo.</p>
+                                </div>
+                            </div>
+                            <button id="btnSortear" class="btn btn-destaque w-100 mt-3">Sortear um livro</button>
+                            <a id="linkSorteio" href="livro.html" class="btn btn-outline-light w-100 mt-2 oculta">Ver este livro</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="container">
             <h2>Destaques da semana</h2>
             <div class="row">
-                <div class="col-6 col-md-3">
-                    <article class="card livro">
-                        <img src="img/livros/dom-casmurro.jpg" class="card-img-top" alt="Capa de Dom Casmurro">
-                        <div class="card-body">
-                            <h3 class="card-title">Dom Casmurro</h3>
-                            <p class="card-text">Machado de Assis</p>
-                            <p class="preco">R$ 29,90</p>
-                            <a href="livro.html" class="btn btn-destaque btn-sm">Ver livro</a>
+            <div class="col-6 col-md-3">
+                <article class="card livro elevar">
+                    <img src="img/livros/dom-casmurro.jpg" class="card-img-top" alt="Capa de Dom Casmurro">
+                    <div class="card-body">
+                        <h3 class="card-title">Dom Casmurro</h3>
+                        <p class="card-text">Machado de Assis</p>
+                        <p class="preco">R$ 29,90</p>
+                        <a href="livro.html" class="btn btn-destaque btn-sm" onclick="escolherLivro(0)">Ver livro</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-6 col-md-3">
+                <article class="card livro elevar">
+                    <img src="img/livros/1984.jpg" class="card-img-top" alt="Capa de 1984">
+                    <div class="card-body">
+                        <h3 class="card-title">1984</h3>
+                        <p class="card-text">George Orwell</p>
+                        <p class="preco">R$ 44,90</p>
+                        <a href="livro.html" class="btn btn-destaque btn-sm" onclick="escolherLivro(1)">Ver livro</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-6 col-md-3">
+                <article class="card livro elevar">
+                    <img src="img/livros/o-hobbit.jpg" class="card-img-top" alt="Capa de O Hobbit">
+                    <div class="card-body">
+                        <h3 class="card-title">O Hobbit</h3>
+                        <p class="card-text">J.R.R. Tolkien</p>
+                        <p class="preco">R$ 54,90</p>
+                        <a href="livro.html" class="btn btn-destaque btn-sm" onclick="escolherLivro(2)">Ver livro</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-6 col-md-3">
+                <article class="card livro elevar">
+                    <img src="img/livros/o-pequeno-principe.jpg" class="card-img-top" alt="Capa de O Pequeno Príncipe">
+                    <div class="card-body">
+                        <h3 class="card-title">O Pequeno Príncipe</h3>
+                        <p class="card-text">Antoine de Saint-Exupéry</p>
+                        <p class="preco">R$ 24,90</p>
+                        <a href="livro.html" class="btn btn-destaque btn-sm" onclick="escolherLivro(3)">Ver livro</a>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </section>
+        <section class="container">
+            <div class="row g-3 mt-1">
+                <div class="col-md-4">
+                    <a href="assinatura.html" class="card chamada">
+                        <img src="img/produtos/caixa.svg" alt="Caixa de assinatura">
+                        <div>
+                            <h3>Caixa surpresa</h3>
+                            <p>Um livro escolhido pelos curadores todo mês.</p>
                         </div>
-                    </article>
+                    </a>
                 </div>
-                <div class="col-6 col-md-3">
-                    <article class="card livro">
-                        <img src="img/livros/1984.jpg" class="card-img-top" alt="Capa de 1984">
-                        <div class="card-body">
-                            <h3 class="card-title">1984</h3>
-                            <p class="card-text">George Orwell</p>
-                            <p class="preco">R$ 44,90</p>
-                            <a href="livro.html" class="btn btn-destaque btn-sm">Ver livro</a>
+                <div class="col-md-4">
+                    <a href="clube.html" class="card chamada">
+                        <img src="img/livros/dom-casmurro.jpg" alt="Capa de Dom Casmurro">
+                        <div>
+                            <h3>Clube do Livro</h3>
+                            <p>Em novembro, Dom Casmurro. Encontros aos sábados.</p>
                         </div>
-                    </article>
+                    </a>
                 </div>
-                <div class="col-6 col-md-3">
-                    <article class="card livro">
-                        <img src="img/livros/o-hobbit.jpg" class="card-img-top" alt="Capa de O Hobbit">
-                        <div class="card-body">
-                            <h3 class="card-title">O Hobbit</h3>
-                            <p class="card-text">J.R.R. Tolkien</p>
-                            <p class="preco">R$ 54,90</p>
-                            <a href="livro.html" class="btn btn-destaque btn-sm">Ver livro</a>
+                <div class="col-md-4">
+                    <a href="catalogo.html" class="card chamada">
+                        <img src="img/produtos/caneca.svg" alt="Caneca para leitores">
+                        <div>
+                            <h3>Para leitores</h3>
+                            <p>Canecas, papelaria e mimos para quem ama ler.</p>
                         </div>
-                    </article>
-                </div>
-                <div class="col-6 col-md-3">
-                    <article class="card livro">
-                        <img src="img/livros/o-pequeno-principe.jpg" class="card-img-top" alt="Capa de O Pequeno Príncipe">
-                        <div class="card-body">
-                            <h3 class="card-title">O Pequeno Príncipe</h3>
-                            <p class="card-text">Antoine de Saint-Exupéry</p>
-                            <p class="preco">R$ 24,90</p>
-                            <a href="livro.html" class="btn btn-destaque btn-sm">Ver livro</a>
-                        </div>
-                    </article>
+                    </a>
                 </div>
             </div>
         </section>
@@ -100,5 +157,8 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/livros.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
