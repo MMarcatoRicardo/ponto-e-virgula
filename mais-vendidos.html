@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais vendidos - Ponto e Vírgula</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ponto e Vírgula<span class="destaque">;</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assinatura.html">Assinatura</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="mais-vendidos.html">Mais vendidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resenhas.html">Resenhas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="clube.html">Clube</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.skoob.com.br" target="_blank">Skoob</a></li>
+                        <li class="nav-item"><a class="nav-link botao-menu" href="nova-resenha.html">Escrever resenha</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Mais vendidos do mês</h2>
+            <p class="resumo">Ranking dos livros que mais saíram da nossa prateleira em outubro. Clique em um livro para ver os detalhes.</p>
+
+            <div class="row g-3 mb-3">
+                <div class="col-6 col-md-3">
+                    <div class="numero-card">
+                        <span id="totalVendas" class="numero">0</span>
+                        <span class="legenda">exemplares vendidos</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div id="cardCampeao" class="numero-card clicavel">
+                        <span id="campeao" class="numero-texto"></span>
+                        <span class="legenda">campeão do mês</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div id="cardMelhorNota" class="numero-card clicavel">
+                        <span id="melhorNota" class="numero-texto"></span>
+                        <span class="legenda">mais bem avaliado</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="numero-card">
+                        <span id="generoTop" class="numero-texto"></span>
+                        <span class="legenda">gênero que mais vendeu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                        <span>Ordenar por:</span>
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-ordem ativo" onclick="ordenar('posicao', this)">Posição</button>
+                            <button class="btn btn-ordem" onclick="ordenar('menorPreco', this)">Menor preço</button>
+                            <button class="btn btn-ordem" onclick="ordenar('maiorPreco', this)">Maior preço</button>
+                            <button class="btn btn-ordem" onclick="ordenar('nota', this)">Nota</button>
+                        </div>
+                        <select id="filtroGenero" class="form-select form-select-sm w-auto ms-md-auto">
+                            <option value="Todos">Todos os gêneros</option>
+                        </select>
+                    </div>
+                    <div class="tabela-rolagem">
+                        <table class="tabela tabela-ranking">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Livro</th>
+                                    <th>Gênero</th>
+                                    <th>Vendas</th>
+                                    <th>Nota</th>
+                                    <th>Preço</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corpoRanking"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <aside class="col-lg-4">
+                    <div class="card quiz mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="h5">De qual livro é esse trecho?</h3>
+                                <span id="placar" class="badge placar">0 acertos</span>
+                            </div>
+                            <blockquote id="trecho" class="trecho"></blockquote>
+                            <div id="opcoes" class="d-grid gap-2"></div>
+                            <div id="resultadoQuiz" class="resultado oculta"></div>
+                            <button id="btnProximo" class="btn btn-destaque btn-sm mt-2 oculta">Próximo trecho</button>
+                        </div>
+                    </div>
+                    <div class="card elogios">
+                        <div class="card-body">
+                            <h3 class="h5">O que os leitores dizem</h3>
+                            <p id="elogioTexto" class="elogio"></p>
+                            <p id="elogioAutor" class="autor-resenha small"></p>
+                            <div id="pontos" class="pontos"></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ponto e Vírgula<span class="destaque">;</span> Livraria e Resenhas - Curitiba/PR</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/livros.js"></script>
+    <script src="js/mais-vendidos.js"></script>
+</body>
+</html>
