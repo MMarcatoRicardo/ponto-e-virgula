@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Ponto e Vírgula</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .valores {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            list-style: none;
+        }
+
+        .valores li {
+            background-color: #1E3A5F;
+            color: #FFFFFF;
+            padding: 6px 16px;
+            margin: 0 8px 8px 0;
+            border-radius: 20px;
+        }
+
+        .video-sobre {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ponto e Vírgula<span class="destaque">;</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assinatura.html">Assinatura</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mais-vendidos.html">Mais vendidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resenhas.html">Resenhas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="clube.html">Clube</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.skoob.com.br" target="_blank">Skoob</a></li>
+                        <li class="nav-item"><a class="nav-link botao-menu" href="nova-resenha.html">Escrever resenha</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Sobre a Ponto e Vírgula</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>A Ponto e Vírgula nasceu em Curitiba da vontade de juntar duas coisas: uma livraria pequena, com livros escolhidos a dedo, e um lugar onde os leitores pudessem contar o que acharam de cada leitura.</p>
+                    <p>O nome vem do sinal que pede uma pausa sem encerrar a frase. É assim que pensamos a leitura: uma pausa no dia que continua na conversa com outras pessoas.</p>
+                    <ul class="valores">
+                        <li>Curadoria</li>
+                        <li>Comunidade</li>
+                        <li>Café</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <video controls src="video/institucional.mp4" class="video-sobre"></video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ponto e Vírgula<span class="destaque">;</span> Livraria e Resenhas - Curitiba/PR</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

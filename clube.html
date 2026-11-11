@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube do Livro - Ponto e Vírgula</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ponto e Vírgula<span class="destaque">;</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assinatura.html">Assinatura</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mais-vendidos.html">Mais vendidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resenhas.html">Resenhas</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="clube.html">Clube</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.skoob.com.br" target="_blank">Skoob</a></li>
+                        <li class="nav-item"><a class="nav-link botao-menu" href="nova-resenha.html">Escrever resenha</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Clube do Livro</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/livros/dom-casmurro.jpg" class="capa-clube" alt="Capa de Dom Casmurro">
+                </div>
+                <div class="col-md-5">
+                    <h3>Livro do mês: Dom Casmurro</h3>
+                    <p>Em novembro vamos ler juntos o clássico de Machado de Assis. Capitu traiu ou não traiu Bentinho? Traga a sua opinião para os encontros.</p>
+                    <p>Ouça o começo do primeiro capítulo:</p>
+                    <audio controls src="audio/dom-casmurro-capitulo-1.mp3"></audio>
+                </div>
+                <div class="col-md-4">
+                    <div class="card encontros">
+                        <div class="card-body">
+                            <h3 class="card-title">Encontros</h3>
+                            <ul>
+                                <li>08/11 - Capítulos 1 a 30</li>
+                                <li>15/11 - Capítulos 31 a 70</li>
+                                <li>22/11 - Capítulos 71 a 110</li>
+                                <li>29/11 - Capítulos 111 a 148</li>
+                            </ul>
+                            <p>Sábados, às 16h, na nossa loja.</p>
+                            <button id="btnParticipar" class="btn btn-destaque">Quero participar</button>
+                            <div id="avisoClube" class="alert alert-success oculta"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ponto e Vírgula<span class="destaque">;</span> Livraria e Resenhas - Curitiba/PR</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/clube.js"></script>
+</body>
+</html>
