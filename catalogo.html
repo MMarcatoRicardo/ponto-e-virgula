@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Ponto e Vírgula</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/puro.css">
+</head>
+<body>
+    <header class="topo">
+        <nav class="conteudo barra">
+            <a class="marca" href="index.html">Ponto e Vírgula<span class="destaque">;</span></a>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a class="ativo" href="catalogo.html">Catálogo</a></li>
+                <li><a href="assinatura.html">Assinatura</a></li>
+                <li><a href="mais-vendidos.html">Mais vendidos</a></li>
+                <li><a href="resenhas.html">Resenhas</a></li>
+                <li><a href="clube.html">Clube</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="https://www.skoob.com.br" target="_blank">Skoob</a></li>
+                <li><a class="botao-menu" href="nova-resenha.html">Escrever resenha</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <div class="topo-catalogo">
+            <h2>Catálogo</h2>
+            <input type="text" id="busca" class="busca" placeholder="Buscar por título, autor ou produto">
+            <button id="btnSacola" class="botao-sacola-topo">🛍 Sacola <span id="contadorSacola">0</span></button>
+        </div>
+        <div class="filtros">
+            <span class="grupo-filtro">Livros:</span>
+            <button class="filtro selecionado" onclick="filtrar('Todos', this)">Tudo</button>
+            <button class="filtro" onclick="filtrar('Livros', this)">Todos os livros</button>
+            <button class="filtro" onclick="filtrar('Clássico', this)">Clássico</button>
+            <button class="filtro" onclick="filtrar('Distopia', this)">Distopia</button>
+            <button class="filtro" onclick="filtrar('Fantasia', this)">Fantasia</button>
+            <button class="filtro" onclick="filtrar('Infantojuvenil', this)">Infantojuvenil</button>
+            <button class="filtro" onclick="filtrar('Contemporâneo', this)">Contemporâneo</button>
+        </div>
+        <div class="filtros">
+            <span class="grupo-filtro">Para leitores:</span>
+            <button class="filtro" onclick="filtrar('Papelaria', this)">Papelaria</button>
+            <button class="filtro" onclick="filtrar('Canecas', this)">Canecas</button>
+            <button class="filtro" onclick="filtrar('Acessórios', this)">Acessórios</button>
+        </div>
+        <p id="quantidade"></p>
+        <div id="grade" class="grade"></div>
+
+        <aside id="painelSacola" class="painel-sacola oculta">
+            <div class="cabeca-sacola">
+                <h3>Sua sacola</h3>
+                <button id="fecharSacola" class="fechar" title="Fechar">×</button>
+            </div>
+            <ul id="listaSacola" class="lista-sacola"></ul>
+            <p class="total-sacola">Total: <strong id="totalSacola">R$ 0,00</strong></p>
+            <button id="btnFinalizar" class="botao">Reservar para retirar na loja</button>
+            <button id="btnEsvaziar" class="botao botao-contorno">Esvaziar</button>
+        </aside>
+        <div id="aviso" class="aviso-flutuante"></div>
+    </main>
+
+    <footer>
+        <div class="conteudo">
+            <p>Ponto e Vírgula<span class="destaque">;</span> Livraria e Resenhas - Curitiba/PR</p>
+        </div>
+    </footer>
+
+    <script src="js/livros.js"></script>
+    <script src="js/produtos.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
