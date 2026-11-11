@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova resenha - Ponto e Vírgula</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Ponto e Vírgula<span class="destaque">;</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assinatura.html">Assinatura</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mais-vendidos.html">Mais vendidos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="resenhas.html">Resenhas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="clube.html">Clube</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.skoob.com.br" target="_blank">Skoob</a></li>
+                        <li class="nav-item"><a class="nav-link botao-menu ativo-botao" href="nova-resenha.html">Escrever resenha</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container formulario">
+            <h2>Escreva sua resenha</h2>
+            <form id="formResenha" onsubmit="return salvarResenha()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nome" class="form-label">Seu nome</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Ex.: Ana Souza" required minlength="3">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="livro" class="form-label">Livro</label>
+                        <select id="livro" class="form-select" required></select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="titulo" class="form-label">Título da resenha</label>
+                        <input type="text" id="titulo" class="form-control" placeholder="Ex.: Um clássico que vale a pena" required minlength="5">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nota" class="form-label">Nota</label>
+                        <select id="nota" class="form-select" required>
+                            <option value="5">5 - Excelente</option>
+                            <option value="4">4 - Muito bom</option>
+                            <option value="3">3 - Bom</option>
+                            <option value="2">2 - Regular</option>
+                            <option value="1">1 - Ruim</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="texto" class="form-label">Sua opinião</label>
+                        <textarea id="texto" class="form-control" rows="4" placeholder="Conte o que achou do livro (mínimo de 20 letras)" required minlength="20"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-destaque">Publicar resenha</button>
+                <a href="resenhas.html" class="btn btn-outline-secondary">Ver resenhas</a>
+            </form>
+            <div id="aviso" class="alert alert-success oculta"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Ponto e Vírgula<span class="destaque">;</span> Livraria e Resenhas - Curitiba/PR</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/livros.js"></script>
+    <script src="js/nova-resenha.js"></script>
+</body>
+</html>
