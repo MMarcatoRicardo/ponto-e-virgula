@@ -9,11 +9,11 @@ Abra o arquivo `index.html` no navegador. O site funciona offline.
 ## Páginas
 | Página | Conteúdo |
 |---|---|
-| `index.html` | Banner com saudação, frases que trocam, números animados, sorteio de livro, destaques e chamadas |
-| `catalogo.html` | Livros e produtos para leitores (papelaria, canecas e acessórios), com busca, filtros e sacola (HTML, CSS e JS puros) |
-| `livro.html` | Detalhes do livro escolhido e botão de favoritar (HTML, CSS e JS puros) |
+| `index.html` | Banner com os números do acervo, sorteio de livro e destaques da semana |
+| `catalogo.html` | Os 12 livros em uma grade; cada capa abre a página do livro (HTML, CSS e JS puros) |
+| `livro.html` | Detalhes do livro escolhido, botão Comprar (abre o Skoob) e botão Escrever resenha (HTML, CSS e JS puros) |
 | `assinatura.html` | Assinatura mensal de livros (caixa surpresa), inspirada na TAG Livros |
-| `mais-vendidos.html` | Ranking do mês em tabela clicável, com ordenação, filtro, quiz de trechos e elogios dos leitores |
+| `mais-vendidos.html` | Ranking do mês em tabela, escrito direto no HTML |
 | `nova-resenha.html` | Formulário para escrever uma resenha |
 | `resenhas.html` | Resenhas salvas, com nota média e opção de excluir |
 | `clube.html` | Clube do Livro com áudio do primeiro capítulo |
