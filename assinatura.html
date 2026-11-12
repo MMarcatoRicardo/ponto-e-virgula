@@ -41,121 +41,72 @@
                     <h2>Caixa Ponto e Vírgula<span class="destaque">;</span></h2>
                     <p class="mb-0">Todo mês, um livro surpresa escolhido pelos nossos curadores, com revista e mimo de leitor.</p>
                 </div>
-                <div class="contagem">
-                    <span class="legenda">A caixa de <strong id="mesCaixa"></strong> fecha em</span>
-                    <div id="contagem" class="relogio"></div>
-                </div>
             </div>
         </section>
 
         <section class="container">
-            <div class="row g-4">
-                <div class="col-lg-7">
-                    <h3 class="titulo-secao">Como funciona</h3>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <div class="passo">
-                                <span class="numero-passo">1</span>
-                                <h4>Escolha</h4>
-                                <p>Escolha a linha de livros e o plano que combinam com você.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="passo">
-                                <span class="numero-passo">2</span>
-                                <h4>Surpresa</h4>
-                                <p>Os curadores escolhem o livro. Você só descobre qual é quando abre a caixa.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="passo">
-                                <span class="numero-passo">3</span>
-                                <h4>Conversa</h4>
-                                <p>A caixa chega até o dia 15 e o livro é debatido no encontro on-line do mês.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3 class="titulo-secao">O que vem na caixa</h3>
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <div class="card conteudo-caixa">
-                                <img src="img/produtos/caixa.svg" class="card-img-top" alt="Caixa com livro">
-                                <div class="card-body">Livro em edição exclusiva</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="card conteudo-caixa">
-                                <img src="img/produtos/revista.svg" class="card-img-top" alt="Revista Pausa">
-                                <div class="card-body">Revista com os bastidores da obra</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="card conteudo-caixa">
-                                <img src="img/produtos/marcadores.svg" class="card-img-top" alt="Marcadores de página">
-                                <div class="card-body">Marcador colecionável</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="card conteudo-caixa">
-                                <img src="img/produtos/caneca-marca.svg" class="card-img-top" alt="Caneca">
-                                <div class="card-body">Mimo de leitor surpresa</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card pista mt-3">
-                        <div class="card-body">
-                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
-                                <h3 class="h6 mb-0">Quer uma pista do livro do mês?</h3>
-                                <button id="btnPista" class="btn btn-destaque btn-sm">Revelar uma pista</button>
-                            </div>
-                            <ol id="listaPistas" class="mb-0 mt-2"></ol>
-                        </div>
+            <h3 class="titulo-secao">Como funciona</h3>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="passo">
+                        <span class="numero-passo">1</span>
+                        <h4>Assine</h4>
+                        <p>Clique em assinar e pronto. O plano é mensal e você cancela quando quiser.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-5">
-                    <div class="card montar">
-                        <div class="card-body">
-                            <h3 class="h5">Monte a sua assinatura</h3>
-
-                            <p class="rotulo">Linha</p>
-                            <div class="d-grid gap-2 mb-3" id="linhas">
-                                <button class="btn btn-escolha ativo" onclick="escolherLinha('classicos', this)">
-                                    <strong>Clássicos;</strong> obras que atravessaram gerações, em capa dura
-                                </button>
-                                <button class="btn btn-escolha" onclick="escolherLinha('novas', this)">
-                                    <strong>Novas vozes;</strong> autores contemporâneos antes de todo mundo
-                                </button>
-                            </div>
-
-                            <p class="rotulo">Plano</p>
-                            <div class="btn-group w-100 mb-3" id="planos">
-                                <button class="btn btn-ordem ativo" onclick="escolherPlano('mensal', this)">Mensal</button>
-                                <button class="btn btn-ordem" onclick="escolherPlano('semestral', this)">Semestral <small>-10%</small></button>
-                                <button class="btn btn-ordem" onclick="escolherPlano('anual', this)">Anual <small>-20%</small></button>
-                            </div>
-
-                            <p class="rotulo">Extras todo mês</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="extraCaneca" onchange="mostrarPreco()">
-                                <label class="form-check-label" for="extraCaneca">Caneca temática (+ R$ 24,90)</label>
-                            </div>
-                            <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="extraVela" onchange="mostrarPreco()">
-                                <label class="form-check-label" for="extraVela">Vela aromática (+ R$ 19,90)</label>
-                            </div>
-
-                            <div class="resumo-preco">
-                                <span id="valorMensal" class="preco-mes"></span><span>/mês</span>
-                                <p id="detalhePreco" class="small mb-0"></p>
-                            </div>
-
-                            <button id="btnAssinar" class="btn btn-destaque w-100 mt-3">Assinar agora</button>
-                            <div id="avisoAssinatura" class="alert alert-success oculta"></div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="passo">
+                        <span class="numero-passo">2</span>
+                        <h4>Surpresa</h4>
+                        <p>Os curadores escolhem o livro. Você só descobre qual é quando abre a caixa.</p>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="passo">
+                        <span class="numero-passo">3</span>
+                        <h4>Conversa</h4>
+                        <p>A caixa chega até o dia 15 e o livro é debatido no encontro on-line do mês.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="titulo-secao">O que vem na caixa</h3>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="card conteudo-caixa">
+                        <img src="img/produtos/caixa.svg" class="card-img-top" alt="Caixa com livro">
+                        <div class="card-body">Livro em edição exclusiva</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card conteudo-caixa">
+                        <img src="img/produtos/revista.svg" class="card-img-top" alt="Revista Pausa">
+                        <div class="card-body">Revista com os bastidores da obra</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card conteudo-caixa">
+                        <img src="img/produtos/marcadores.svg" class="card-img-top" alt="Marcadores de página">
+                        <div class="card-body">Marcador colecionável</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card conteudo-caixa">
+                        <img src="img/produtos/caneca-marca.svg" class="card-img-top" alt="Caneca">
+                        <div class="card-body">Mimo de leitor surpresa</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card montar">
+                <div class="card-body">
+                    <h3 class="h5">Assine a Caixa Ponto e Vírgula<span class="destaque">;</span></h3>
+                    <div class="resumo-preco">
+                        <span class="preco-mes">R$ 69,90</span><span>/mês</span>
+                        <p class="small mb-0">Cancele quando quiser, sem multa.</p>
+                    </div>
+                    <button id="btnAssinar" class="btn btn-destaque w-100 mt-3">Assinar agora</button>
+                    <div id="avisoAssinatura" class="alert alert-success oculta"></div>
                 </div>
             </div>
         </section>
@@ -168,7 +119,6 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/livros.js"></script>
     <script src="js/assinatura.js"></script>
 </body>
 </html>

@@ -5,8 +5,6 @@ for (let i = 0; i < livros.length; i++) {
     campoLivro.innerHTML += `<option value="${i}">${livros[i].titulo}</option>`;
 }
 
-campoLivro.value = localStorage.getItem("livroEscolhido") || 0;
-
 function salvarResenha() {
     let resenhas = JSON.parse(localStorage.getItem("resenhas")) || [];
 
