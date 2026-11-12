@@ -278,47 +278,9 @@ audio {
     color: #555555;
 }
 
-.clicavel {
-    cursor: pointer;
-}
-
-.clicavel:hover {
-    border-color: #2F6EA5;
-    border-left-color: #E0A526;
-}
-
-.btn-ordem {
-    background-color: #FFFFFF;
-    border: 1px solid #D5DBE3;
-    color: #1E3A5F;
-}
-
-.btn-ordem:hover {
-    border-color: #E0A526;
-    color: #0B1F3A;
-}
-
-.btn-ordem.ativo {
-    background-color: #0B1F3A;
-    border-color: #0B1F3A;
-    color: #FFFFFF;
-}
-
 .tabela-ranking td {
     padding: 8px 12px;
     vertical-align: middle;
-}
-
-.linha-livro {
-    cursor: pointer;
-}
-
-.miniatura {
-    width: 36px;
-    height: 52px;
-    object-fit: cover;
-    border-radius: 3px;
-    box-shadow: 0 1px 4px rgba(11, 31, 58, 0.3);
 }
 
 .posicao {
@@ -326,150 +288,9 @@ audio {
     white-space: nowrap;
 }
 
-.tendencia {
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-
-.tendencia.sobe {
-    color: #198754;
-}
-
-.tendencia.desce {
-    color: #DC3545;
-}
-
-.tendencia.igual {
-    color: #8A94A3;
-}
-
-.barra-vendas {
-    min-width: 80px;
-    height: 6px;
-    margin-top: 4px;
-    background-color: #E9EDF2;
-    border-radius: 3px;
-}
-
-.barra-preenchida {
-    height: 100%;
-    background: linear-gradient(90deg, #2F6EA5, #E0A526);
-    border-radius: 3px;
-    animation: crescer 0.8s ease;
-}
-
-@keyframes crescer {
-    from {
-        width: 0;
-    }
-}
-
-.nota {
-    color: #B7841A;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.quiz,
-.elogios {
-    border: 1px solid #D5DBE3;
-}
-
-.placar {
-    background-color: #E0A526;
-    color: #0B1F3A;
-}
-
-.trecho {
-    margin: 12px 0;
-    padding: 8px 12px;
-    border-left: 4px solid #E0A526;
-    background-color: #F4F6F9;
-    font-family: Georgia, "Times New Roman", serif;
-    font-style: italic;
-}
-
-.btn-opcao {
-    background-color: #FFFFFF;
-    border: 1px solid #D5DBE3;
-    text-align: left;
-}
-
-.btn-opcao:hover {
-    border-color: #2F6EA5;
-}
-
-.btn-opcao:disabled {
-    opacity: 1;
-    color: #1C2430;
-}
-
-.btn-opcao.certo {
-    background-color: #D1E7DD;
-    border-color: #198754;
-}
-
-.btn-opcao.errado {
-    background-color: #F8D7DA;
-    border-color: #DC3545;
-}
-
-.resultado {
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
-.elogio {
-    min-height: 72px;
-    margin-bottom: 4px;
-    font-style: italic;
-}
-
-.aparecer {
-    animation: surgir 0.6s ease;
-}
-
-@keyframes surgir {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.pontos span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 6px;
-    border-radius: 50%;
-    background-color: #D5DBE3;
-    cursor: pointer;
-}
-
-.pontos span.ativo {
-    background-color: #E0A526;
-}
-
-.saudacao {
-    margin-bottom: 8px;
-    color: #E0A526;
-    font-size: 0.95rem;
-}
-
-.palavra-girando {
-    display: inline-block;
+.palavra-destaque {
     color: #E0A526;
     font-weight: bold;
-    transition: opacity 0.4s, transform 0.4s;
-}
-
-.palavra-girando.saindo {
-    opacity: 0;
-    transform: translateY(-8px);
 }
 
 .numeros-banner {
@@ -515,19 +336,6 @@ audio {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-.girando {
-    animation: balancar 0.18s infinite alternate;
-}
-
-@keyframes balancar {
-    from {
-        transform: rotate(-4deg) scale(0.96);
-    }
-    to {
-        transform: rotate(4deg) scale(1.02);
-    }
-}
-
 .titulo-sorteio {
     margin-bottom: 4px;
     font-family: Georgia, "Times New Roman", serif;
@@ -541,15 +349,6 @@ audio {
     color: rgba(255, 255, 255, 0.75);
 }
 
-.elevar {
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.elevar:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 22px rgba(11, 31, 58, 0.15);
-}
-
 .chamada {
     display: flex;
     flex-direction: row;
@@ -560,11 +359,9 @@ audio {
     border: 1px solid #D5DBE3;
     color: #1C2430;
     text-decoration: none;
-    transition: transform 0.2s, border-color 0.2s;
 }
 
 .chamada:hover {
-    transform: translateY(-4px);
     border-color: #E0A526;
     color: #1C2430;
 }
@@ -596,34 +393,6 @@ audio {
 .faixa-assinatura h2 {
     margin: 0 0 4px;
     color: #FFFFFF;
-}
-
-.contagem .legenda {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.relogio {
-    display: flex;
-    gap: 8px;
-    margin-top: 4px;
-}
-
-.relogio span {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 54px;
-    padding: 4px 6px;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
-    font-size: 0.7rem;
-}
-
-.relogio b {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.4rem;
-    color: #E0A526;
 }
 
 .titulo-secao {
@@ -684,37 +453,10 @@ audio {
     font-size: 0.85rem;
 }
 
-.pista {
-    border: 1px dashed #E0A526;
-}
-
 .montar {
     margin-top: 20px;
     border: 1px solid #D5DBE3;
     border-top: 4px solid #E0A526;
-}
-
-.rotulo {
-    margin-bottom: 6px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #555555;
-}
-
-.btn-escolha {
-    border: 2px solid #D5DBE3;
-    background-color: #FFFFFF;
-    font-size: 0.9rem;
-    text-align: left;
-}
-
-.btn-escolha:hover {
-    border-color: #2F6EA5;
-}
-
-.btn-escolha.ativo {
-    border-color: #E0A526;
-    background-color: #FDF3DC;
 }
 
 .resumo-preco {

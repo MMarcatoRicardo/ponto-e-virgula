@@ -70,12 +70,6 @@ p {
     color: #FFFFFF;
 }
 
-.filtros {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.filtro,
 .botao {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
@@ -90,15 +84,9 @@ p {
     display: inline-block;
 }
 
-.filtro:hover,
 .botao:hover {
     background-color: #2F6EA5;
     border-color: #2F6EA5;
-    color: #FFFFFF;
-}
-
-.filtro.selecionado {
-    background-color: #1E3A5F;
     color: #FFFFFF;
 }
 
@@ -116,10 +104,6 @@ p {
     text-align: center;
     text-decoration: none;
     color: #1C2430;
-}
-
-.item:hover {
-    border-color: #E0A526;
 }
 
 .item img {
@@ -196,90 +180,17 @@ p {
     color: #1E3A5F;
 }
 
-.favorito {
-    background-color: #1E3A5F;
-    border-color: #1E3A5F;
-    color: #E0A526;
-}
-
 .topo-catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
     margin: 24px 0 12px;
 }
 
-.topo-catalogo h2 {
-    margin: 0 auto 0 0;
-}
-
-.busca {
-    flex: 1;
-    min-width: 220px;
-    max-width: 360px;
-    padding: 8px 14px;
-    border: 2px solid #D5DBE3;
-    border-radius: 20px;
-    font-size: 1rem;
-}
-
-.busca:hover {
-    border-color: #2F6EA5;
-}
-
-.busca:focus {
-    border-color: #E0A526;
-    outline: none;
-}
-
-.botao-sacola-topo {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    background-color: #0B1F3A;
-    color: #FFFFFF;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.botao-sacola-topo:hover {
-    background-color: #2F6EA5;
-}
-
-.botao-sacola-topo span {
-    display: inline-block;
-    min-width: 22px;
-    margin-left: 4px;
-    padding: 0 6px;
-    border-radius: 11px;
-    background-color: #E0A526;
-    color: #0B1F3A;
-    font-weight: bold;
-}
-
-.grupo-filtro {
-    padding: 8px 8px 0 0;
-    color: #555555;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
 .item {
-    position: relative;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(11, 31, 58, 0.12);
-}
-
-.item a {
-    color: #1C2430;
-    text-decoration: none;
+    border-color: #E0A526;
 }
 
 .item img {
@@ -291,115 +202,3 @@ p {
     margin: 4px 0 8px;
 }
 
-.selo {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    background-color: #E0A526;
-    color: #0B1F3A;
-    font-size: 0.7rem;
-    font-weight: bold;
-}
-
-.adicionar {
-    margin-top: auto;
-    padding: 6px;
-    border: 1px solid #1E3A5F;
-    border-radius: 6px;
-    background-color: #FFFFFF;
-    color: #1E3A5F;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.adicionar:hover {
-    background-color: #1E3A5F;
-    color: #FFFFFF;
-}
-
-.vazio {
-    grid-column: 1 / -1;
-    color: #555555;
-}
-
-.painel-sacola {
-    position: fixed;
-    top: 80px;
-    right: 16px;
-    z-index: 10;
-    width: 320px;
-    max-width: calc(100% - 32px);
-    padding: 16px;
-    border: 1px solid #D5DBE3;
-    border-top: 4px solid #E0A526;
-    border-radius: 8px;
-    background-color: #FFFFFF;
-    box-shadow: 0 12px 30px rgba(11, 31, 58, 0.25);
-}
-
-.cabeca-sacola {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cabeca-sacola h3 {
-    margin: 0;
-}
-
-.fechar,
-.remover {
-    border: none;
-    background: none;
-    color: #8A94A3;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-.fechar:hover,
-.remover:hover {
-    color: #DC3545;
-}
-
-.lista-sacola {
-    max-height: 240px;
-    overflow-y: auto;
-    margin: 12px 0;
-    padding: 0;
-    list-style: none;
-}
-
-.lista-sacola li {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 6px 0;
-    border-bottom: 1px solid #EEF1F5;
-    font-size: 0.9rem;
-}
-
-.total-sacola {
-    font-size: 1.1rem;
-}
-
-.aviso-flutuante {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    z-index: 20;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: #0B1F3A;
-    color: #FFFFFF;
-    opacity: 0;
-    transform: translate(-50%, 20px);
-    transition: opacity 0.3s, transform 0.3s;
-    pointer-events: none;
-}
-
-.aviso-flutuante.visivel {
-    opacity: 1;
-    transform: translate(-50%, 0);
-}
