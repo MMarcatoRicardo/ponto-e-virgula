@@ -37,88 +37,117 @@
     <main>
         <section class="container">
             <h2>Mais vendidos do mês</h2>
-            <p class="resumo">Ranking dos livros que mais saíram da nossa prateleira em outubro. Clique em um livro para ver os detalhes.</p>
+            <p class="resumo">Ranking dos livros que mais saíram da nossa prateleira em outubro.</p>
 
             <div class="row g-3 mb-3">
-                <div class="col-6 col-md-3">
+                <div class="col-12 col-md-4">
                     <div class="numero-card">
-                        <span id="totalVendas" class="numero">0</span>
+                        <span class="numero">1834</span>
                         <span class="legenda">exemplares vendidos</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div id="cardCampeao" class="numero-card clicavel">
-                        <span id="campeao" class="numero-texto"></span>
+                <div class="col-12 col-md-4">
+                    <div class="numero-card">
+                        <span class="numero-texto">Torto Arado</span>
                         <span class="legenda">campeão do mês</span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div id="cardMelhorNota" class="numero-card clicavel">
-                        <span id="melhorNota" class="numero-texto"></span>
-                        <span class="legenda">mais bem avaliado</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
+                <div class="col-12 col-md-4">
                     <div class="numero-card">
-                        <span id="generoTop" class="numero-texto"></span>
+                        <span class="numero-texto">Contemporâneo</span>
                         <span class="legenda">gênero que mais vendeu</span>
                     </div>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <div class="col-lg-8">
-                    <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
-                        <span>Ordenar por:</span>
-                        <div class="btn-group btn-group-sm">
-                            <button class="btn btn-ordem ativo" onclick="ordenar('posicao', this)">Posição</button>
-                            <button class="btn btn-ordem" onclick="ordenar('menorPreco', this)">Menor preço</button>
-                            <button class="btn btn-ordem" onclick="ordenar('maiorPreco', this)">Maior preço</button>
-                            <button class="btn btn-ordem" onclick="ordenar('nota', this)">Nota</button>
-                        </div>
-                        <select id="filtroGenero" class="form-select form-select-sm w-auto ms-md-auto">
-                            <option value="Todos">Todos os gêneros</option>
-                        </select>
-                    </div>
-                    <div class="tabela-rolagem">
-                        <table class="tabela tabela-ranking">
-                            <thead>
-                                <tr>
-                                    <th>Posição</th>
-                                    <th>Livro</th>
-                                    <th>Gênero</th>
-                                    <th>Vendas</th>
-                                    <th>Nota</th>
-                                    <th>Preço</th>
-                                </tr>
-                            </thead>
-                            <tbody id="corpoRanking"></tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <aside class="col-lg-4">
-                    <div class="card quiz mb-3">
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <h3 class="h5">De qual livro é esse trecho?</h3>
-                                <span id="placar" class="badge placar">0 acertos</span>
-                            </div>
-                            <blockquote id="trecho" class="trecho"></blockquote>
-                            <div id="opcoes" class="d-grid gap-2"></div>
-                            <div id="resultadoQuiz" class="resultado oculta"></div>
-                            <button id="btnProximo" class="btn btn-destaque btn-sm mt-2 oculta">Próximo trecho</button>
-                        </div>
-                    </div>
-                    <div class="card elogios">
-                        <div class="card-body">
-                            <h3 class="h5">O que os leitores dizem</h3>
-                            <p id="elogioTexto" class="elogio"></p>
-                            <p id="elogioAutor" class="autor-resenha small"></p>
-                            <div id="pontos" class="pontos"></div>
-                        </div>
-                    </div>
-                </aside>
+            <div class="tabela-rolagem">
+                <table class="tabela tabela-ranking">
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Gênero</th>
+                            <th>Vendas</th>
+                            <th>Nota</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="posicao">1º</td>
+                            <td><strong>Torto Arado</strong></td>
+                            <td>Itamar Vieira Junior</td>
+                            <td>Contemporâneo</td>
+                            <td>342</td>
+                            <td>4,8</td>
+                            <td class="preco">R$ 59,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">2º</td>
+                            <td><strong>O Pequeno Príncipe</strong></td>
+                            <td>Antoine de Saint-Exupéry</td>
+                            <td>Infantojuvenil</td>
+                            <td>298</td>
+                            <td>4,9</td>
+                            <td class="preco">R$ 24,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">3º</td>
+                            <td><strong>Dom Casmurro</strong></td>
+                            <td>Machado de Assis</td>
+                            <td>Clássico</td>
+                            <td>251</td>
+                            <td>4,6</td>
+                            <td class="preco">R$ 29,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">4º</td>
+                            <td><strong>A Biblioteca da Meia-Noite</strong></td>
+                            <td>Matt Haig</td>
+                            <td>Contemporâneo</td>
+                            <td>230</td>
+                            <td>4,5</td>
+                            <td class="preco">R$ 47,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">5º</td>
+                            <td><strong>Harry Potter e a Pedra Filosofal</strong></td>
+                            <td>J.K. Rowling</td>
+                            <td>Fantasia</td>
+                            <td>214</td>
+                            <td>4,8</td>
+                            <td class="preco">R$ 49,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">6º</td>
+                            <td><strong>1984</strong></td>
+                            <td>George Orwell</td>
+                            <td>Distopia</td>
+                            <td>187</td>
+                            <td>4,7</td>
+                            <td class="preco">R$ 44,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">7º</td>
+                            <td><strong>O Hobbit</strong></td>
+                            <td>J.R.R. Tolkien</td>
+                            <td>Fantasia</td>
+                            <td>163</td>
+                            <td>4,7</td>
+                            <td class="preco">R$ 54,90</td>
+                        </tr>
+                        <tr>
+                            <td class="posicao">8º</td>
+                            <td><strong>Alice no País das Maravilhas</strong></td>
+                            <td>Lewis Carroll</td>
+                            <td>Infantojuvenil</td>
+                            <td>149</td>
+                            <td>4,4</td>
+                            <td class="preco">R$ 27,90</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
@@ -130,7 +159,5 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/livros.js"></script>
-    <script src="js/mais-vendidos.js"></script>
 </body>
 </html>
